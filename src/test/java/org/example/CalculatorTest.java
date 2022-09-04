@@ -48,4 +48,13 @@ class CalculatorTest {
         assertEquals('A', obj.determineGrade(99));
     }
 
+    @Test
+    void negativeNumberShouldReturnIllegalArgumentException(){
+
+        var calculator = new Calculator();
+        assertThrows(IllegalArgumentException.class, () ->
+        {calculator.determineGrade(-5);});
+
+    }
+
 }
